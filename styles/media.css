@@ -1,0 +1,15 @@
+@media (max-width: 755px) {
+    .main-input {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 100%;
+    }
+    .inputX {
+        border-radius: 54px;
+    }
+    .button {
+        border-radius: 200px;
+        width: 200px;
+        text-align: center;
+    }
+}

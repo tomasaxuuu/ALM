@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap');
+@import "./reset.css";
+@import "./media.css";
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+body::-webkit-scrollbar-track {
+    background: #c4a2ff;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #aebbff;
+    border-radius: 20px;
+    border: 1px solid #aebbff;
+}
+
+body {
+    background-image: url(../img/vivid-blurred-colorful-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+#header {
+    padding: 30px 45px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#main {
+    padding: 30px 45px;
+}
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nameLab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+}
+.nameLab h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 52px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 9px;
+}
+.nameLab h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 9px;
+}
+.nameLab p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 9px;
+}
+.main-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content img {
+    border: 2px solid black;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    border-radius: 20px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.inputX::placeholder {
+    color: #000000;
+    font-weight: 700;
+}
+.btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.button {
+    padding: 14px 63px;
+    max-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    margin-bottom: 30px;
+}
+.button::before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(2px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 10s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.button:active {
+    color: #000
+}
+
+.buttonr:active:after {
+    background: transparent;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.inputX{
+    padding: 16px 150px 17px 32px;
+    width: 480px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 54px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 30px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
