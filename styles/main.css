@@ -161,15 +161,12 @@ body {
 .button:active {
     color: #000
 }
-
 .buttonr:active:after {
     background: transparent;
 }
-
 .button:hover:before {
     opacity: 1;
 }
-
 .button:after {
     z-index: -1;
     content: '';

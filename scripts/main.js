@@ -37,7 +37,6 @@ function mili () {
         document.querySelector('.fun3').innerHTML = "F3: " + F3;
         document.querySelector('.fun4').innerHTML = "F4: " + F4;
        
-       
         switch (F1) {
             case 1:
                 document.querySelector('.s0').innerHTML = "Начальные состояния:<br><br>s0: " + s0;
