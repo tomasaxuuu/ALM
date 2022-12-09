@@ -27,16 +27,69 @@
             <div class="main-row">
                 <div class="main-content">
                     <div class="img-row">
-                        <img class="tz" src="./img/TZ.jpg" alt="tz">
+                        <ol>
+                            <li>Begin</li>
+                            <li>If F1 = 1, go to 2</li>
+                            <li>Y1, Y3, Y5</li>
+                            <li>Y2, Y3 </li>
+                            <li>If F2 = 1, go to 9</li>
+                            <li>If F3 = 0, go to 10</li>
+                            <li>If F4 = 1, go to 11</li>
+                            <li>Go to 10</li>
+                            <li>y2, y4</li>
+                            <li>y3, y5</li>
+                            <li>y2, y3, y4</li>
+                            <li>If F1 = 0, go to 5</li>
+                            <li>End</li>
+                        </ol>
+                        <div class="fs-block">
+                            <p class="Fs">F1 = ¬X1X3 ∨ ¬X1X2 ∨ X1X3X4 ∨ ¬X1X2X3 ∨ ¬X1¬X2</p>
+                            <p class="Fs">F2 = ¬X1¬X2X3X4 ∨ X1X2X3X4 ∨ X1¬X2¬X3X4 ∨ X1X2¬X3</p>
+                            <p class="Fs">F3 = ¬X1¬X2¬X3X4 ∨ ¬X1X2X3X4 ∨ X1X2X3X4 ∨ X1¬X2X3¬X4</p>
+                            <p class="Fs">F4 = ¬X1¬X3 ∨ ¬X1¬X2 ∨ X1X3X4 ∨ ¬X3X2X1 ∨ ¬X1X2X4</p>
+                        </div>
                         <div class="img-row-row">
-                            <img src="./img/bool.jpg" alt="bool">
-                            <img class='f' src="./img/1.jpg">
-                            <img class='f' src="./img/2.jpg">
-                            <img class='f' src="./img/3.jpg">
-                            <img class='f' src="./img/4.jpg">
+                            <table>
+                                <tr><th>x1</th><th>x2</th><th>x3</th><th>x4</th></tr> <!--ряд с ячейками заголовков-->
+                                <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                                <tr><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
+                            <table>
+                                <tr><th>F1</th><th>F2</th><th>F3</th><th>F4</th></tr> <!--ряд с ячейками заголовков-->
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>1</td><td>1</td></tr>
+                                <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+                                <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                                <tr><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+                                <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                            </table>
                         </div>
                     </div>
-                    <img src="./img/func.jpg" alt="functions">
+                   
                     
                 </div>
                 <input type="text" class="inputX" autocomplete="off" placeholder="Enter X1...X4">

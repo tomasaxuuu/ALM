@@ -8,12 +8,12 @@ body::-webkit-scrollbar {
     width: 12px;
 }
 body::-webkit-scrollbar-track {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #8E2DE2, #4A00E0);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
 body::-webkit-scrollbar-thumb {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #8E2DE2, #4A00E0);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
     border-radius: 20px;
@@ -21,10 +21,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #68F091, #8228EA);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: 200vh;
     font-family: 'Modak', cursive;
 }
 @keyframes gradient {
@@ -76,7 +76,6 @@ body {
     padding-bottom: 9px;
 }
 .nameLab h2 {
-    
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -90,7 +89,7 @@ body {
     font-weight: 400;
     font-size: 22px;
     line-height: 32px;
-    text-align: center;
+    text-align: justify;
     color: #ffffff;
     padding-bottom: 9px;
 }
@@ -100,7 +99,50 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.Fs {
+    font-family: 'Modak', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #68F091;
+    -webkit-text-stroke: 2px rgb(52, 51, 51);
+}
+ol {
+    display: flex;
+    flex-direction: column;
+}
+ol li {
+    font-family: 'Modak', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #4A00E0;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+table:nth-child(1) tr {
+    font-family: 'Modak', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    -webkit-text-stroke: 2px rgb(52, 51, 51);
+}
+table:nth-child(2) tr {
+    font-family: 'Modak', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color:  #8E2DE2;
+    -webkit-text-stroke: 2px rgb(52, 51, 51);
+}
 .main-content img {
     border: 2px solid black;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -116,12 +158,11 @@ body {
     padding-bottom: 30px;
 }
 .inputX::placeholder {
-    color: #000000;
+    font-family: 'Modak', cursive;
+    font-style: normal;
     font-weight: 400;
-}
-.tz {
-    width: 282px;
-    height: 302.55px;
+    color: #00ffd5;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 .btn {
     font-style: normal;
@@ -129,7 +170,9 @@ body {
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    font-family: 'Modak', cursive;
+    color: #fdfdfd;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 .button {
     padding: 14px 63px;
@@ -139,8 +182,7 @@ body {
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
-    cursor: pointer;
+    background: #111;    cursor: pointer;
     position: relative;
     z-index: 0;
     border-radius: 10px;
@@ -148,20 +190,24 @@ body {
     filter: drop-shadow(5px 5px 5px #222);
     margin-bottom: 30px;
 }
+.fs-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .img-row {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 30px;
 }
 .img-row-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2px;
-}
-.f {
-    margin-top: 32px;
+    gap: 40px;
 }
 .button::before {
     content: '';
@@ -207,14 +253,13 @@ body {
 .inputX{
     padding: 16px 150px 17px 32px;
     width: 480px;
-    background: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 54px;
+    border: 1px solid  #00ffd5;
+    font-size: 24px;
+    font-family: 'Modak', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 17px;
-    color: #000000;
+    color: #00ffd5;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
     margin-bottom: 30px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
