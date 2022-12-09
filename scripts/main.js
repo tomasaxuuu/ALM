@@ -39,42 +39,60 @@ function mili () {
        
         switch (F1) {
             case 1:
-                document.querySelector('.s0').innerHTML = "Начальные состояния:<br><br>s0: " + s0;
+                document.querySelector('.s0').innerHTML = "Состояния:<br><br>s0: " + s0;
+                document.querySelector('.y0').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                 setTimeout(function(){ alert("Программа зациклилась!!!"); }, 1000);
                 setTimeout(function(){ location.reload(); }, 3000);
             break;
             case 0:
                 document.querySelector('.s0').innerHTML = "Начальные состояния:<br><br>s0: " + s0;
                 document.querySelector('.y0').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
-                y1 = 1;
-                y3 = 1;
-                y5 = 1;
-                y2 = 1;
-                y4 = 1;
                 setTimeout(function(){  
+                    y1 = 1;
+                    y3 = y5 = y1;
                     document.querySelector('.s1').innerHTML = "Состояния:<br><br>s1: " + s1;
-                    document.querySelector('.y1').innerHTML = "y1: " + y1 + ", y3: " + y3 + ", y5: " + y5 + "<br><br>"; 
+                    document.querySelector('.y1').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>"; 
                 }, 1000);
                 setTimeout(function(){  
+                    y2 = y3;
+                    y1 = 0;
+                    y4 = y5 = y1;
                     document.querySelector('.s2').innerHTML = "Состояния:<br><br>s2: " + s2;
-                    document.querySelector('.y2').innerHTML = "y2: " + y2 + ", y3: " + y3 + "<br><br>"; 
+                    document.querySelector('.y2').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>"; 
                 }, 2000);
                 switch(F2) {
                     case 1:
-                        y4 = 1;
-                        setTimeout(function(){  
-                            document.querySelector('.s3').innerHTML = "Состояния:<br><br>s3: " + s3 + ", s4: " + s4;
-                            document.querySelector('.y3').innerHTML = "y2: " + y2 + ", y4: " + y4 + "<br><br>y3: " + y3 + ", y5: " + y5 + "<br><br>y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + "<br><br>"; 
-                            document.querySelector('.s4').innerHTML = "Состояния:<br><br>s5: " + s5;
+                        setTimeout(function(){
+                            y1 = 0;
+                            y3 = y5 = y1;
+                            y4 = 1, y2 = 1;
+                            document.querySelector('.s3').innerHTML = "Состояния:<br><br>s3: " + s3;
+                            document.querySelector('.y3').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                            document.querySelector('.s4').innerHTML = "Состояния:<br><br>s4: " + s4;
+                            y3 = 1;
+                            y1 = 0;
+                            y2 = y4 = y1;
+                            y5 = y3;
+                            document.querySelector('.y4').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                            document.querySelector('.s5').innerHTML = "Состояния:<br><br>s5: " + s5;
+                            y3 = 1;
+                            y1 = 0;
+                            y2 = y4 = y3;
+                            y5 = y1;
+                            document.querySelector('.y5').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                         }, 3000);
-                        setTimeout(function(){  
+                        setTimeout(function(){ 
+                            y1 = 0;
+                            y2 = y3 = y4 = y5 = y1; 
                             if(F1 == 0) {
-                                document.querySelector('.s5').innerHTML = "s2: " + s2;
+                                document.querySelector('.s6').innerHTML = "Состояния:<br><br>s2: " + s2;
+                                document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                 setTimeout(function(){
                                     alert("Программа зациклилась!!!");
                                 }, 1000);  
                             } else {
-                                document.querySelector('.s5').innerHTML = "s0: " + s0;
+                                document.querySelector('.s6').innerHTML = "Состояния:<br><br>s0: " + s0;
+                                document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                 setTimeout(function(){
                                     alert("Конец программы!");
                                 }, 1000);  
@@ -84,19 +102,27 @@ function mili () {
                     case 0:
                        switch (F3) {
                             case 0:
-                                setTimeout(function(){  
-                                    document.querySelector('.s4').innerHTML = "Состояния:<br><br>s3: " + s3 + ", s4: " + s4;
-                                    document.querySelector('.y4').innerHTML = "y3: " + y3 + ", y5: " + y5 + "<br><br>y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + "<br><br>"; 
-                                    document.querySelector('.s5').innerHTML = "Состояния:<br><br>s5: " + s5;
+                                setTimeout(function(){
+                                    y3 = 1, y5 = y3, y1 = 0, y2 = y4 = y1;  
+                                    document.querySelector('.s3').innerHTML = "Состояния:<br><br>s3: " + s3;
+                                    document.querySelector('.y3').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                                    document.querySelector('.s4').innerHTML = "Состояния:<br><br>s4: " + s4;
+                                    y3 = 1, y2 = y4 = y3, y1 = 0, y5 = y1;  
+                                    document.querySelector('.y4').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                                    document.querySelector('.s5').innerHTML = "Состояния:<br><br>s5: " + s5 + "<br><br>";
                                 }, 5000);
                                 setTimeout(function(){  
+                                    y1 = 0;
+                                    y2 = y3 = y4 = y5 = y1;
                                     if(F1 == 0) {
-                                        document.querySelector('.s6').innerHTML = "s2: " + s2;
+                                        document.querySelector('.s6').innerHTML = "Состояния:<br><br>s2: " + s2;
+                                        document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                         setTimeout(function(){
                                             alert("Программа зациклилась!!!");
                                         }, 1000);  
                                     } else {
-                                        document.querySelector('.s6').innerHTML = "s0: " + s0;
+                                        document.querySelector('.s6').innerHTML = "Состояния:<br><br>s0: " + s0;
+                                        document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                         setTimeout(function(){
                                             alert("Конец программы!");
                                         }, 1000);  
@@ -106,19 +132,29 @@ function mili () {
                             case 1:
                                 switch(F4) {
                                     case 0:
-                                        setTimeout(function(){  
-                                            document.querySelector('.s5').innerHTML = "Состояния:<br><br>s3: " + s3 + ", s4: " + s4;
-                                            document.querySelector('.y5').innerHTML = "y3: " + y3 + ", y5: " + y5 + "<br><br>y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + "<br><br>"; 
-                                            document.querySelector('.s6').innerHTML = "Состояния:<br><br>s5: " + s5;
+                                        setTimeout(function(){
+                                            y3 = 1, y5 = y3;
+                                            y1 = 0, y2 = y4 = y1;  
+                                            document.querySelector('.s3').innerHTML = "Состояния:<br><br>s3: " + s3;
+                                            document.querySelector('.y3').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                                            document.querySelector('.s4').innerHTML = "Состояния:<br><br>s4: " + s4;
+                                            y3 = 1, y4 = y2 = y3;
+                                            y1 = 0, y5 = y1;  
+                                            document.querySelector('.y4').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                                            document.querySelector('.s5').innerHTML = "Состояния:<br><br>s5: " + s5 + "<br><br>";
                                         }, 7000);
                                         setTimeout(function(){  
+                                            y1 = 0;
+                                            y2 = y3 = y4 = y5 = y1;
                                             if(F1 == 0) {
-                                                document.querySelector('.s7').innerHTML = "s2: " + s2;
+                                                document.querySelector('.s6').innerHTML = "s2: " + s2;
+                                                document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                                 setTimeout(function(){
                                                     alert("Программа зациклилась!!!");
                                                 }, 1000);  
                                             } else {
-                                                document.querySelector('.s7').innerHTML = "s0: " + s0;
+                                                document.querySelector('.s6').innerHTML = "s0: " + s0;
+                                                document.querySelector('.y6').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                                 setTimeout(function(){
                                                     alert("Конец программы!");
                                                 }, 1000);  
@@ -126,19 +162,25 @@ function mili () {
                                         }, 8000);
                                     break;
                                     case 1:
-                                        setTimeout(function(){  
-                                            document.querySelector('.s6').innerHTML = "Состояния:<br><br>s4: " + s4;
-                                            document.querySelector('.y6').innerHTML = "y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + "<br><br>"; 
-                                            document.querySelector('.s7').innerHTML = "Состояния:<br><br>s5: " + s5;
+                                        setTimeout(function(){
+                                            y2 = 1, y3 = y4 = y2;
+                                            y1 = 0, y5 = y1;  
+                                            document.querySelector('.s3').innerHTML = "Состояния:<br><br>s4: " + s4;
+                                            document.querySelector('.y3').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
+                                            document.querySelector('.s4').innerHTML = "Состояния:<br><br>s5: " + s5;
                                         }, 9000);
                                         setTimeout(function(){  
+                                            y1 = 0;
+                                            y2 = y3 = y4 = y5 = y1;
                                             if(F1 == 0) {
-                                                document.querySelector('.s8').innerHTML = "s2: " + s2;
+                                                document.querySelector('.s5').innerHTML = "Состояния:<br><br>s2: " + s2;
+                                                document.querySelector('.y5').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                                 setTimeout(function(){
                                                     alert("Программа зациклилась!!!");
                                                 }, 1000);  
                                             } else {
-                                                document.querySelector('.s8').innerHTML = "s0: " + s0;
+                                                document.querySelector('.s5').innerHTML = "Состояния:<br><br>s0: " + s0;
+                                                document.querySelector('.y5').innerHTML = "y1: " + y1 + ", y2: " + y2 + ", y3: " + y3 + ", y4: " + y4 + ", y5: " + y5 + "<br><br>";
                                                 setTimeout(function(){
                                                     alert("Конец программы!");
                                                 }, 1000);  
