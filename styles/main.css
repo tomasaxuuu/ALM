@@ -44,6 +44,8 @@ body {
     left: 0;
     right: 0;
     -webkit-text-stroke: 2px rgb(52, 51, 51);
+    color: #FFF;
+    mix-blend-mode: multiply;
 }
 #main {
     font-family: 'Chicle', cursive;
@@ -72,7 +74,6 @@ body {
     font-size: 42px;
     line-height: 52px;
     text-align: center;
-    color: #ffffff;
     padding-bottom: 9px;
 }
 .nameLab h2 {
@@ -81,7 +82,6 @@ body {
     font-size: 32px;
     line-height: 42px;
     text-align: center;
-    color: #ffffff;
     padding-bottom: 9px;
 }
 .nameLab p {
@@ -90,7 +90,6 @@ body {
     font-size: 22px;
     line-height: 32px;
     text-align: justify;
-    color: #ffffff;
     padding-bottom: 9px;
 }
 .main-row {
@@ -124,23 +123,25 @@ ol li {
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 table:nth-child(1) tr {
+    color: #FFF;
+    mix-blend-mode: multiply;
     font-family: 'Modak', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 32px;
     text-align: center;
-    color: #ffffff;
     -webkit-text-stroke: 2px rgb(52, 51, 51);
 }
 table:nth-child(2) tr {
+    color: #FFF;
+    mix-blend-mode: multiply;
     font-family: 'Modak', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 32px;
     text-align: center;
-    color:  #8E2DE2;
     -webkit-text-stroke: 2px rgb(52, 51, 51);
 }
 .main-content img {
@@ -161,7 +162,8 @@ table:nth-child(2) tr {
     font-family: 'Modak', cursive;
     font-style: normal;
     font-weight: 400;
-    color: #00ffd5;
+    color: #FFF;
+    mix-blend-mode: multiply;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 .btn {
@@ -258,7 +260,8 @@ table:nth-child(2) tr {
     font-family: 'Modak', cursive;
     font-style: normal;
     font-weight: 400;
-    color: #00ffd5;
+    color: #FFF;
+    mix-blend-mode: multiply;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
     margin-bottom: 30px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -286,7 +289,8 @@ table:nth-child(2) tr {
     font-size: 20px;
     line-height: 17px;
     padding-bottom: 10px;
-    color: #ffffff;
+    color: #FFF;
+    mix-blend-mode: multiply;
 }
 .states {
     text-align: center;
