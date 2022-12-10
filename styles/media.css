@@ -13,3 +13,26 @@
         text-align: center;
     }
 }
+@media (max-width: 640px) {
+    .inputX {
+        width: 80%;
+        padding-right: 30px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 550px) {
+    .nameLab h1 {
+        font-size: 35px;
+    }
+    .nameLab h2 {
+        font-size: 26px;
+    }
+    .nameLab p {
+        font-size: 20px;
+        text-align: center;
+        max-width: 190px;
+    }
+}
+@media (max-width: 350px) {
+
+}
